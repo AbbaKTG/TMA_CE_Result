@@ -1,0 +1,464 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://cdn.datatables.net/1.13.4/css/dataTables.bootstrap.min.css">
+    <link rel="stylesheet" href="https://cdn.datatables.net/fixedheader/3.3.2/css/fixedHeader.bootstrap.min.css">
+    <link rel="stylesheet" href="https://cdn.datatables.net/responsive/2.4.1/css/responsive.bootstrap.min.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+    <link rel="shortcut icon" href="images/TMA_CircledLogo_NoBG.png" type="image/x-icon">
+    <title>Navbar Example</title>
+    <style>
+        /* Custom CSS for navbar */
+        body {
+            font-family: 'Montserrat', Arial, sans-serif;
+            background-color: #f2f2f2;
+            color: #333;
+            line-height: 1.5;
+            /* padding: 20px; */
+        }
+
+        .navbar-default {
+            background-color: #333;
+            border-color: #222;
+            height: 80px;
+            border-radius: 0%;
+        }
+
+        .navbar-default .navbar-brand {
+            color: #fff;
+            font-weight: bold;
+            font-size: 22px;
+            text-transform: uppercase;
+            text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.4);
+            padding-top: 15px;
+            height: 100%;
+        }
+
+        .tab_h {
+            background-color: #8a1e16;
+            color: #fff;
+            text-align: center;
+        }
+
+        .navbar-default .navbar-brand span {
+            color: #ffcc00;
+        }
+
+        .navbar-default .navbar-brand strong {
+            color: #fff;
+        }
+
+        .navbar-default .navbar-brand img {
+            display: inline-block;
+            margin-right: 10px;
+            height: 53px;
+            width: 65px;
+            vertical-align: middle;
+        }
+
+        /* .footer {
+      background-color: #333;
+      border-color: #222;
+      height: 80px;
+      border-radius: 0%;
+      color: #fff;
+      text-align: center;
+      position: fixed;
+      bottom: 0;
+      left: 0;
+      width: 100%;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    } */
+
+        .footer {
+            background-color: #333;
+            border-color: #222;
+            height: 80px;
+            border-radius: 0%;
+            color: #fff;
+            text-align: center;
+            position: fixed;
+            bottom: 0;
+            left: 0;
+            width: 100%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .footer-icon {
+            margin-right: 2px;
+            font-size: 18px;
+            vertical-align: middle;
+        }
+
+        .footer-text {
+            /* display: flex; */
+            align-items: center;
+            font-size: 10px;
+            vertical-align: middle;
+        }
+
+        tr:nth-child(even) {
+            background-color: #5a5c41;
+        }
+
+        .pass {
+            color: rgb(21, 179, 68);
+        }
+
+        .fail {
+            color: #cf0e00;
+        }
+    </style>
+</head>
+
+<body>
+
+    <nav class="navbar navbar-default navbar-fixed-top">
+        <div class="container-fluid">
+            <div class="navbar-header">
+                <a class="navbar-brand" href="#">
+                    <img src="images/TMA_CircledLogo_NoBG.png" alt="Logo">
+                    <span><strong>Tinker <span>Montessori</span> Academy</strong></span>
+                </a>
+            </div>
+        </div>
+    </nav>
+
+
+
+    <div class="container">
+        <div class="row">
+
+            <h2 class="text-center" style="font-size: 22px; font-weight: bold; color: #333;">2023/2024 Common Entrance
+                Exam
+                Results.</h2>
+            <p class="lead text-center" style="font-size: 15px; color: #666;">Below are the results of the 2023/2024
+                common
+                entrance exam conducted for admission.</p>
+
+            <div class="table-responsive" style="text-align: center;">
+                <table id="example" class="table table-striped table-bordered nowrap" style="width:100%">
+                    <thead class="tab_h">
+                        <tr>
+                            <th>S.No.:</th>
+                            <th>Last Name:</th>
+                            <th>Other Name(s):</th>
+                            <th>Class:</th>
+                            <th>Age:</th>
+                            <th>Maths (50):</th>
+                            <th>English Language (60):</th>
+                            <th>General Knowledge (60):</th>
+                            <th>Total:</th>
+                            <th>Status:</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>1</td>
+                            <td>Abdulkadir</td>
+                            <td>Abdulaziz Umar</td>
+                            <td>JSS 1</td>
+                            <td>11</td>
+                            <td>35</td>
+                            <td>46</td>
+                            <td>48</td>
+                            <td>129</td>
+                            <td class="pass">PASSED</td>
+                        </tr>
+                        <tr>
+                            <td>2</td>
+                            <td>Abdulkareem</td>
+                            <td>Aliyu</td>
+                            <td>JSS 1</td>
+                            <td>11</td>
+                            <td>18</td>
+                            <td>28</td>
+                            <td>34</td>
+                            <td>80</td>
+                            <td class="fail">FAILED</td>
+                        </tr>
+                        <tr>
+                            <td>3</td>
+                            <td>Bello</td>
+                            <td>Adnan Adam</td>
+                            <td>JSS 1</td>
+                            <td>14</td>
+                            <td>14</td>
+                            <td>16</td>
+                            <td>27</td>
+                            <td>57</td>
+                            <td class="fail">FAILED</td>
+                        </tr>
+                        <tr>
+                            <td>4</td>
+                            <td>Ibrahim</td>
+                            <td>Aisha Ismail</td>
+                            <td>JSS 1</td>
+                            <td>11</td>
+                            <td>15</td>
+                            <td>27</td>
+                            <td>35</td>
+                            <td>77</td>
+                            <td class="fail">FAILED</td>
+                        </tr>
+                        <tr>
+                            <td>5</td>
+                            <td>Abdussalam</td>
+                            <td>Ammar</td>
+                            <td>JSS 1</td>
+                            <td>13</td>
+                            <td>21</td>
+                            <td>49</td>
+                            <td>52</td>
+                            <td>122</td>
+                            <td class="pass">PASSED</td>
+                        </tr>
+                        <tr>
+                            <td>6</td>
+                            <td>Ibrahim</td>
+                            <td>Alamin</td>
+                            <td>JSS 2</td>
+                            <td>11</td>
+                            <td>19</td>
+                            <td>30</td>
+                            <td>32</td>
+                            <td>81</td>
+                            <td class="fail">FAILED</td>
+                        </tr>
+                        <tr>
+                            <td>7</td>
+                            <td>Yunus</td>
+                            <td>Dalhat Muhammad</td>
+                            <td>JSS 1</td>
+                            <td>11</td>
+                            <td>24</td>
+                            <td>39</td>
+                            <td>46</td>
+                            <td>109</td>
+                            <td class="pass">PASSED</td>
+                        </tr>
+                        <tr>
+                            <td>8</td>
+                            <td>Suleiman</td>
+                            <td>Hassan Bala</td>
+                            <td>JSS 1</td>
+                            <td>11</td>
+                            <td>24</td>
+                            <td>48</td>
+                            <td>40</td>
+                            <td>112</td>
+                            <td class="pass">PASSED</td>
+                        </tr>
+                        <tr>
+                            <td>9</td>
+                            <td>Suleiman</td>
+                            <td>Hussain Bala</td>
+                            <td>JSS 1</td>
+                            <td>11</td>
+                            <td>25</td>
+                            <td>35</td>
+                            <td>43</td>
+                            <td>103</td>
+                            <td class="pass">PASSED</td>
+                        </tr>
+                        <tr>
+                            <td>10</td>
+                            <td>Rufai</td>
+                            <td>Shaheed Muhammad</td>
+                            <td>JSS 1</td>
+                            <td>12</td>
+                            <td>25</td>
+                            <td>43</td>
+                            <td>49</td>
+                            <td>117</td>
+                            <td class="pass">PASSED</td>
+                        </tr>
+                        <tr>
+                            <td>11</td>
+                            <td>Rufai</td>
+                            <td>Shaheedah Muhammad</td>
+                            <td>JSS 1</td>
+                            <td>12</td>
+                            <td>24</td>
+                            <td>35</td>
+                            <td>33</td>
+                            <td>92</td>
+                            <td class="pass">PASSED</td>
+                        </tr>
+                        <tr>
+                            <td>12</td>
+                            <td>Mustapha</td>
+                            <td>Maimuna</td>
+                            <td>JSS 1</td>
+                            <td>11</td>
+                            <td>27</td>
+                            <td>50</td>
+                            <td>46</td>
+                            <td>123</td>
+                            <td class="pass">PASSED</td>
+                        </tr>
+                        <tr>
+                            <td>13</td>
+                            <td>Mukhtar</td>
+                            <td>Muazu</td>
+                            <td>JSS 1</td>
+                            <td>12</td>
+                            <td>12</td>
+                            <td>14</td>
+                            <td>23</td>
+                            <td>49</td>
+                            <td class="fail">FAILED</td>
+                        </tr>
+                        <tr>
+                            <td>14</td>
+                            <td>Giwa</td>
+                            <td>Nasir Usman</td>
+                            <td>JSS 1</td>
+                            <td>11</td>
+                            <td>13</td>
+                            <td>25</td>
+                            <td>18</td>
+                            <td>56</td>
+                            <td class="fail">FAILED</td>
+                        </tr>
+                        <tr>
+                            <td>15</td>
+                            <td>Idris</td>
+                            <td>Mustapha Idris</td>
+                            <td>JSS 2</td>
+                            <td>12</td>
+                            <td>16</td>
+                            <td>33</td>
+                            <td>36</td>
+                            <td>85</td>
+                            <td class="fail">FAILED</td>
+                        </tr>
+                        <tr>
+                            <td>16</td>
+                            <td>Tsoho</td>
+                            <td>Usman Shehu</td>
+                            <td>JSS 1</td>
+                            <td>11</td>
+                            <td>23</td>
+                            <td>34</td>
+                            <td>32</td>
+                            <td>89</td>
+                            <td class="fail">FAILED</td>
+                        </tr>
+                        <tr>
+                            <td>17</td>
+                            <td>Muhammad</td>
+                            <td>Bashir</td>
+                            <td>JSS 2</td>
+                            <td>12</td>
+                            <td>17</td>
+                            <td>28</td>
+                            <td>37</td>
+                            <td>82</td>
+                            <td class="fail">FAILED</td>
+                        </tr>
+                        <tr>
+                            <td>18</td>
+                            <td>El - Busairi</td>
+                            <td>Hanan Nasir</td>
+                            <td>JSS 1</td>
+                            <td>12</td>
+                            <td>24</td>
+                            <td>46</td>
+                            <td>53</td>
+                            <td>123</td>
+                            <td class="pass">PASSED</td>
+                        </tr>
+                        <tr>
+                            <td>19</td>
+                            <td>Alfa - wan</td>
+                            <td>Fatima Bintu</td>
+                            <td>JSS 1</td>
+                            <td>12</td>
+                            <td>26</td>
+                            <td>43</td>
+                            <td>50</td>
+                            <td>119</td>
+                            <td class="pass">PASSED</td>
+                        </tr>
+                        <tr>
+                            <td>20</td>
+                            <td>Abubakar</td>
+                            <td>Umar Faruk</td>
+                            <td>JSS 1</td>
+                            <td>12</td>
+                            <td>10</td>
+                            <td>15</td>
+                            <td>16</td>
+                            <td>41</td>
+                            <td class="fail">FAILED</td>
+                        </tr>
+                        <tr>
+                            <td>21</td>
+                            <td>Mahmud</td>
+                            <td>Usman</td>
+                            <td>JSS 1</td>
+                            <td>12</td>
+                            <td>17</td>
+                            <td>29</td>
+                            <td>28</td>
+                            <td>84</td>
+                            <td class="fail">FAILED</td>
+                        </tr>
+                        <tr>
+                            <td>22</td>
+                            <td>Idris</td>
+                            <td>Fatima Ibrahim</td>
+                            <td>JSS 2</td>
+                            <td>13</td>
+                            <td>18</td>
+                            <td>27</td>
+                            <td>25</td>
+                            <td>70</td>
+                            <td class="fail">FAILED</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+
+        </div>
+    </div>
+    <div class="col-lg-2 col-md-2 col-sm-2"></div> <!-- Empty column to create space -->
+    </div>
+    </div>
+
+    <footer class="footer">
+        <p> <i class="material-icons footer-icon">language</i>2023 TINKER MONTESSORI ACADEMY, All rights reserved. |<i
+                class="material-icons footer-icon">location_on</i>Lere Street, U/Dosa, Kaduna, Nigeria. |<i
+                class="material-icons footer-icon">phone</i>0803 368 3857</p>
+    </footer>
+
+    <script src="https://kit.fontawesome.com/your-font-awesome-kit.js" crossorigin="anonymous"></script>
+    <script src="https://code.jquery.com/jquery-3.5.1.js"></script>
+    <script src="https://cdn.datatables.net/1.13.4/js/jquery.dataTables.min.js"></script>
+    <script src="https://cdn.datatables.net/1.13.4/js/dataTables.bootstrap.min.js"></script>
+    <script src="https://cdn.datatables.net/fixedheader/3.3.2/js/dataTables.fixedHeader.min.js"></script>
+    <script src="https://cdn.datatables.net/responsive/2.4.1/js/dataTables.responsive.min.js"></script>
+    <script src="https://cdn.datatables.net/responsive/2.4.1/js/responsive.bootstrap.min.js"></script>
+    <script>
+        $(document).ready(function () {
+            var table = $('#example').DataTable({
+                responsive: true
+            });
+
+            new $.fn.dataTable.FixedHeader(table);
+        });
+    </script>
+
+
+</body>
+
+</html>
