@@ -125,10 +125,10 @@
     <p class="lead text-center" style="font-size: 15px; color: #666;">Below are the results of the common entrance exam
         conducted for admission. Click the + to expand (mobile view).</p>
 
-        <p class="lead text-center" style="font-size: 15px; color: #000;">
-            <strong>PASSMARK: <span id="passMarkValue">80</span></strong>
-        </p>
-        
+    <p class="lead text-center" style="font-size: 15px; color: #000;">
+        <strong>PASSMARK: <span id="passMarkValue">80</span></strong>
+    </p>
+
 
     <div class="container">
         <div class="row">
@@ -180,9 +180,9 @@
             var table = $('#example').DataTable({
                 responsive: true
             });
-    
+
             new $.fn.dataTable.FixedHeader(table);
-    
+
             var tableData = {
                 table1: [
                     ["1", "Abdulkadir", "Abdulaziz Umar", "JSS 1", "11", "35", "46", "48", "PASSED"],
@@ -211,38 +211,47 @@
                     ["24", "Aminu", "Zainab Jibril", "JSS 1", "11", "7", "18", "25", "FAILED"]
                 ],
                 table2: [
-                      ["1", "Aminu", "Fadila", "JSS 1", "11", "30", "33", "45", "0", "PASSED"],
-                      ["2", "Mustapha", "Amatullah Sali", "JSS 1", "12", "36", "36", "52", "0", "PASSED"],
-                      ["3", "Hassan", "Usman", "JSS 1", "11", "24", "20", "36", "0", "PASSED"],
-                      ["4", "Kabir", "Mus’ab A.", "JSS 1", "12", "19", "15", "33", "0", "PASSED"],
-                      ["5", "Haruna", "Rukayya I.", "JSS 1", "10", "18", "18", "23", "0", "PASSED"],
-                      ["6", "Ibrahim", "Idris Idris", "JSS 1", "12", "09", "14", "18", "0", "PASSED"],
-                      ["7", "Isma’il", "Rukayya", "JSS 1", "11", "29", "27", "42", "0", "PASSED"],
-                      ["8", "Al-Hassan", "Fatima Zarah", "JSS 1", "11", "30", "25", "35", "0", "PASSED"],
-                      ["9", "Aliyu", "Zainab Abubakar", "JSS 1", "11", "21", "18", "33", "0", "PASSED"],
-                      ["10", "Uthman", "Halima Sali", "JSS 1", "12", "38", "24", "51", "0", "PASSED"],
-                      ["11", "Shehu", "Maryam Balami", "JSS 1", "", "15", "25", "17", "0", "PASSED"], // Year of birth missing, age not calculated
-                      ["12", "Nuruddeen", "Aslam", "JSS 1", "11", "37", "38", "53", "0", "PASSED"],
-                      ["13", "Usman", "Fatima T.", "JSS 1", "11", "25", "18", "42", "0", "PASSED"],
-                      ["14", "Abubakar", "Amina Mu’azu", "JSS 1", "11", "20", "24", "25", "0", "PASSED"],
-                      ["15", "Surajo", "Sani Sani", "JSS 1", "12", "13", "23", "42", "0", "PASSED"],
-                      ["16", "Abubakar", "Faisal", "JSS 1", "13", "18", "30", "36", "0", "PASSED"],
-                      ["17", "Muhammad", "Adam", "JSS 1", "12", "26", "25", "42", "0", "PASSED"]
+                    ["1", "Aminu", "Fadila", "JSS 1", "11", "30", "33", "45", "0", "PASSED"],
+                    ["2", "Mustapha", "Amatullah Sali", "JSS 1", "12", "36", "36", "52", "0", "PASSED"],
+                    ["3", "Hassan", "Usman", "JSS 1", "11", "24", "20", "36", "0", "PASSED"],
+                    ["4", "Kabir", "Mus’ab A.", "JSS 1", "12", "19", "15", "33", "0", "PASSED"],
+                    ["5", "Haruna", "Rukayya I.", "JSS 1", "10", "18", "18", "23", "0", "PASSED"],
+                    ["6", "Ibrahim", "Idris Idris", "JSS 1", "12", "09", "14", "18", "0", "PASSED"],
+                    ["7", "Isma’il", "Rukayya", "JSS 1", "11", "29", "27", "42", "0", "PASSED"],
+                    ["8", "Al-Hassan", "Fatima Zarah", "JSS 1", "11", "30", "25", "35", "0", "PASSED"],
+                    ["9", "Aliyu", "Zainab Abubakar", "JSS 1", "11", "21", "18", "33", "0", "PASSED"],
+                    ["10", "Uthman", "Halima Sali", "JSS 1", "12", "38", "24", "51", "0", "PASSED"],
+                    ["11", "Shehu", "Maryam Balami", "JSS 1", "", "15", "25", "17", "0", "PASSED"], // Year of birth missing, age not calculated
+                    ["12", "Nuruddeen", "Aslam", "JSS 1", "11", "37", "38", "53", "0", "PASSED"],
+                    ["13", "Usman", "Fatima T.", "JSS 1", "11", "25", "18", "42", "0", "PASSED"],
+                    ["14", "Abubakar", "Amina Mu’azu", "JSS 1", "11", "20", "24", "25", "0", "PASSED"],
+                    ["15", "Surajo", "Sani Sani", "JSS 1", "12", "13", "23", "42", "0", "PASSED"],
+                    ["16", "Abubakar", "Faisal", "JSS 1", "13", "18", "30", "36", "0", "PASSED"],
+                    ["17", "Muhammad", "Adam", "JSS 1", "12", "26", "25", "42", "0", "PASSED"],
+                    ["18", "Bello", "Muhammad Auwal", "JSS 1", "-", "17", "26", "34", "77", "PASSED"],
+                    ["19", "Haruna", "Abubakar Babaji", "JSS 1", "-", "25", "20", "31", "76", "PASSED"],
+                    ["20", "Kassim", "Hafsat", "JSS 1", "-", "17", "28", "26", "71", "PASSED"],
+                    ["21", "Yusuf", "Abdullahi Abdullahi", "JSS 1", "-", "15", "18", "20", "53", "FAILED"],
+                    ["22", "Kabir", "Yusuf", "JSS 1", "-", "21", "30", "32", "83", "PASSED"],
+                    ["23", "Ummulkulthum", "Suleiman", "JSS 1", "-", "14", "19", "17", "50", "FAILED"],
+                    ["24", "Alibe", "Aisha Bunu", "JSS 1", "-", "17", "25", "22", "64", "PASSED"],
+                    ["25", "Abubakar", "Maryam", "JSS 1", "-", "14", "36", "30", "80", "PASSED"]
+
                 ]
 
                 // Add more tables as needed
             };
-    
+
             var passMarks = {
                 table1: 80, // Pass mark for table1
                 table2: 80  // Pass mark for table2
                 // Add more pass marks as needed
             };
-    
+
             var updatePassMarkDisplay = function (passMark) {
                 $('#passMarkValue').text(passMark);
             };
-    
+
             function updateTable(data, passMark) {
                 var tableBody = $('#tableBody');
                 table.clear();
@@ -258,19 +267,19 @@
                     ]).draw(false);
                 });
             }
-    
+
             $('#tableSelector').on('change', function () {
                 var selectedTable = $(this).val();
                 updatePassMarkDisplay(passMarks[selectedTable]);
                 updateTable(tableData[selectedTable], passMarks[selectedTable]);
             });
-    
+
             // Initially load the first table
             updatePassMarkDisplay(passMarks.table2);
             updateTable(tableData.table2, passMarks.table2);
         });
     </script>
-    
+
 
 </body>
 
